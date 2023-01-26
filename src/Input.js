@@ -4,10 +4,11 @@ const Input = (props) => {
     <input
       type={props.type}
       id={props.id}
-      class={props.class}
+      className={props.class}
       placeholder={props.placeholder}
       value={props.estado}
-      onChange={(e) => props.setEstado(e.target.value)}
+      name={props.name}
+      onChange={(e) => props.setestado(e.target.value)}
     />
   );
 };

@@ -1,7 +1,7 @@
 function CheckBox(props) {
   return (
     <input
-      class={props.class}
+      className={props.class}
       id={props.id}
       type={props.type}
       disabled={props.disabled}

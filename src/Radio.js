@@ -1,7 +1,7 @@
 function Radio(props) {
   return (
     <input
-      class={props.class}
+      className={props.class}
       type={props.type}
       value={props.value}
       onChange={props.onChange}

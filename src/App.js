@@ -1,63 +1,75 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Input from "./Input";
 import { Button } from "./Button";
 import { useState } from "react";
-import TextArea from "./TextArea";
 import "./App.css";
-import CheckBox from "./CheckBox";
-import Radio from "./Radio";
 
 const App = () => {
-  const [estado, setEstado] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const input = {
+  const error = validate(email, password);
+
+  console.log(email, password)
+
+  const inputEmail = {
     type: "text",
-    placeholder: "Ingrese su nombre",
-    class: "input1",
+    placeholder: "Ingrese su Email",
+    class: "inputPassword",
+    name: "email",
+  };
+
+  const inputPassword = {
+    type: "text",
+    placeholder: "Ingrese su contraseña",
+    class: "inputPassword",
+    name: "password",
   };
 
   const button = {
     class: "btn-primary",
     color: "#000000",
+    type: "submit",
   };
 
-  const textArea = {
-    placeholder: "Escriba su apellido",
-    id: 4,
-    class: "textArea1",
-    type: "Checkbox",
-  };
-
-  const checkBox = {
-    class: "checkbox1",
-    type: "checkbox",
-  };
-
-  const radioRD = {
-    type: "radio",
-    class: "rd-1",
-  };
   return (
-    <div>
-      <Input
-        estado={estado}
-        setEstado={setEstado}
-        class={input.class}
-        type={input.type}
-        placeholder={input.placeholder}
-      />
-      <div class="text-check">
-        <TextArea
-          placeholder={textArea.placeholder}
-          id={textArea.id}
-          class={textArea.class}
+    <Fragment>
+      <h2 className="h2-titulo">Formulario</h2>
+      <form>
+        <Input
+          estado={email}
+          setestado={setEmail}
+          class={inputEmail.class}
+          type={inputEmail.type}
+          placeholder={inputEmail.placeholder}
+          onChange={(ev) => setEmail(ev.target.value)}
+          name={inputEmail.name}
         />
-        <CheckBox class={checkBox.class} type={checkBox.type}></CheckBox>
-      </div>
-      <Radio class={radioRD.class} type={radioRD.type}></Radio>
-      <Button disabled={!estado} name="Buscar" class={button.class} />
-    </div>
+        <Input
+          estado={password}
+          setestado={setPassword}
+          class={inputPassword.class}
+          type={inputPassword.type}
+          placeholder={inputPassword.placeholder}
+          onChange={(ev) => setPassword(ev.target.value)}
+          name={inputPassword.name}
+        />
+
+        <Button
+          disabled={error}
+          name="Enviar"
+          class={button.class}
+          type={button.type}
+        />
+      </form>
+    </Fragment>
   );
+};
+
+const validate = (email, password) => {
+  if (!email.includes("@")) return "Email incorrecto";
+  if (password.length < 8)
+    return "La contraseña debe tener 8 caracteres como minimo.";
 };
 
 export default App;

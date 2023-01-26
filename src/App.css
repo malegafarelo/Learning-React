@@ -1,50 +1,49 @@
-.input1{
-    width:180px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	display:inline-block;
-
+.h2-titulo{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 40px;
 }
 
-
-.textArea1{
-    display: block;
-    width:180px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	
+.inputEmail {
+    align-items: center;
+  width: 190px;
+  height: 20px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
 }
 
-.btn-primary{
-    display: block;
-    background-color: #000000;
-    color: white;
-    text-decoration-color: white;
-    height: 30px;
-    width: 60px;
+.inputPassword {
+  display: block;
+  width: 190px;
+  height: 20px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  
 }
 
-.btn-primary:disabled{
-    display: block;
-    background-color:#0000;
-    color: #000000;
-    height: 30px;
-    width: 60px;
-
+.btn-primary {
+  display: block;
+  background-color: #000000;
+  color: white;
+  text-decoration-color: white;
+  height: 30px;
+  width: 60px;
+  margin-left: 60px;
+  margin-top: 20px;
 }
 
-.text-check{
-    display: flex;
+.btn-primary:disabled {
+  display: block;
+  background-color: #0000;
+  color: #000000;
+  height: 30px;
+  width: 60px;
+  margin-left: 60px;
+  margin-top: 20px;
 }
-
-.checkBox1{
-    display: inline-block;
-}
-
-
